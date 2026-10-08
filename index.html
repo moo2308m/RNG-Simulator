@@ -5,27 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>RNG Simulator</title>
 <style>
-* {
-  text-decoration: none;
-}
+* { text-decoration: none; }
 body {
-  background-color: #323232;
-  font-size: 16px;
+  background: linear-gradient(#424242, #111111); min-height: 100dvh; font-size: 16px;
   overflow: hidden;
 }
 #rollBtn {
-  display: block;
-  margin: 0;
-  color: white;
-  font-family: sans-serif;
-  background: linear-gradient(#00ff44, #00c434);
-  width: 10dvh;
-  height: 100dvh;
+  display: flex;  width: 10rem; height: 3rem; align-items: center; text-align: center;
+  justify-content: center; font-family: sans-serif; color: white; font-size: 1.8em;
+  border-radius: 0.5em; border: 0.175em solid transparent;
+  background: linear-gradient(#00ff44, #00c434) padding-box, linear-gradient(#00c434, #019128) border-box;
+}
+#topbar {
+   position: absolute; left: 0; top: 0; background-color: black; width: 100dvw; height: 3.5em;
 }
 </style>
 </head>
 <body>
-  <div id="rollBtn">Hi</div>
+  <div id="topbar">RNG Simulator</div>
+  <button id="rollBtn">Roll</button>
 <script>
 
 </script>
