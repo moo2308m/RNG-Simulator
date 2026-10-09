@@ -10,26 +10,29 @@
 }
 body {
   background: linear-gradient(#424242, #111111); min-height: 100dvh; font-size: 16px;
-  overflow: hidden;
+  overflow: hidden; font-weight: bold;
 }
 #topbar {
   display: flex; background-color: #222222; width: 100%; height: 2.5em; color: white;
   font-family: sans-serif; align-items: center; text-align: left; justify-content: space-between;
-   font-weight: bold; font-size: 20px; transition: font-size 0.4s ease; font-style: italic;
+  font-size: 20px; transition: font-size 0.4s ease; font-style: italic;
   padding: 0 1rem;
 }
 #topbar:hover {
   font-size: 24px; cursor: default;
+}
+#rolled {
+  color: white; font-size: 30px; font-family: sans-serif; margin: 0 1rem;
 }
 #rollBtn {
   display: flex;  width: 10rem; height: 3rem; align-items: center; text-align: center;
   justify-content: center; font-family: sans-serif; color: #99ff99; font-size: 1.8em;
   border-radius: 0.5em; border: 0.175em solid transparent; margin: 1rem;
   background: linear-gradient(#00ff44, #00c434) padding-box, linear-gradient(#00c434, #019128) border-box;
-  font-weight: bold; webkit-user-select: none; user-select: none; transition: transform 0.4s ease;
+  webkit-user-select: none; user-select: none; transition: transform 0.4s ease;
 }
 #rollBtn:hover {
-  transform: scale(1.2); cursor: pointer; transition: transform 0.4s ease;
+  transform: scale(1.2); cursor: pointer;
 }
 #rollBtn:active, #rollBtn.active {
   transform: scale(0.8); cursor: pointer; transition: transform 0.1s ease;
@@ -45,15 +48,20 @@ body {
     <span id="money" style="color: #17fc03;">$0</span>
   </div>
   <button id="rollBtn">Roll</button>
+  <div id="rolled">You rolled: <i></i></div>
 <script>
 "use strict"
 
 const rollBtn = document.getElementById("rollBtn");
 const moneyCounter = document.getElementById("money");
+const rolled = document.getElementById("rolled");
+const rolledDisplay = document.querySelector("#rolled i");
 let money = 0;
+let yourRoll = 0;
 
 function roll() {
-  money += Math.random();
+  yourRoll = Math.random();
+  money += yourRoll;
   this.blur();
 }
 
@@ -75,6 +83,7 @@ document.addEventListener("keyup", (e) => {
 function animateUI() {
   requestAnimationFrame(animateUI);
   moneyCounter.textContent = "$" + money.toFixed(2);
+  rolledDisplay.textContent = yourRoll.toFixed(2);
 }
 animateUI();
 </script>
