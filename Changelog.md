@@ -14,3 +14,5 @@ This is the **changelog** for *RNG Simulator.* I obviously change this with ever
 - Made roll() function
 - Changed some things with the cursor
 - Made changelog, with everything I did in v0.0.1 still in my head
+- Added spacebar clicking
+- Made repo public
