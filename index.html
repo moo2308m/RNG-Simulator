@@ -26,10 +26,16 @@ body {
   justify-content: center; font-family: sans-serif; color: #99ff99; font-size: 1.8em;
   border-radius: 0.5em; border: 0.175em solid transparent; margin: 1rem;
   background: linear-gradient(#00ff44, #00c434) padding-box, linear-gradient(#00c434, #019128) border-box;
-  font-weight: bold; transition: transform 0.4s ease; webkit-user-select: none; user-select: none;
+  font-weight: bold; webkit-user-select: none; user-select: none; transition: transform 0.4s ease;
 }
 #rollBtn:hover {
-  transform: scale(1.2); cursor: pointer;
+  transform: scale(1.2); cursor: pointer; transition: transform 0.4s ease;
+}
+#rollBtn:active, #rollBtn.active {
+  transform: scale(0.8); cursor: pointer; transition: transform 0.1s ease;
+}
+#rollBtn:active {
+  transform: scale(0.8); cursor: pointer; transition: transform 0.1s ease;
 }
 </style>
 </head>
@@ -40,7 +46,37 @@ body {
   </div>
   <button id="rollBtn">Roll</button>
 <script>
+"use strict"
 
+const rollBtn = document.getElementById("rollBtn");
+const moneyCounter = document.getElementById("money");
+let money = 0;
+
+function roll() {
+  money += Math.random();
+  this.blur();
+}
+
+rollBtn.addEventListener("click", roll);
+document.addEventListener("keydown", (e) => {
+  if(e.code === "Space") {
+    e.preventDefault();
+    if(e.repeat) return;
+    rollBtn.classList.add("active");
+    roll();
+  }
+});
+document.addEventListener("keyup", (e) => {
+  if (e.code === "Space") {
+    rollBtn.classList.remove("active");
+  }
+});
+
+function animateUI() {
+  requestAnimationFrame(animateUI);
+  moneyCounter.textContent = "$" + money.toFixed(2);
+}
+animateUI();
 </script>
 </body>
 </html>
