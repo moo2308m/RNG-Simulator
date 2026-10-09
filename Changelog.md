@@ -1,3 +1,4 @@
+# RNG Simulator - Changelog #
 ## v0.0.1 Alpha ##
 - Named it RNG Simulator
 - Did the CSS and HTML setup
