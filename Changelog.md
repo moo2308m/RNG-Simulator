@@ -16,3 +16,6 @@ This is the **changelog** for *RNG Simulator.* I obviously change this with ever
 - Made changelog, with everything I did in v0.0.1 still in my head
 - Added spacebar clicking
 - Made repo public
+
+## v0.0.21 Alpha ##
+- Made a change with italics
