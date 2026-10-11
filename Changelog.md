@@ -23,5 +23,5 @@ This is the **changelog** for *RNG Simulator.* I obviously change this with ever
 ### v0.0.22 Alpha ###
 - Even more CSS changes (will I ever be satisfied?)
 - Added customizable decimal precision since I like customizability
-- This is because I've gotten rolls like ```0.008913805749128811``` and I couldn't see the whole thing with the current ```.toFixed(2)```
+- This is because I've gotten rolls like ```0.0008913805749128811``` and I couldn't see the whole thing with the current ```.toFixed(2)```
 - I thought I just got a straight ```0.00``` and had to use ```console.log(yourRoll)``` to find out that I actually didn't get ```0.00```
