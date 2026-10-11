@@ -11,7 +11,7 @@ This is the **changelog** for *RNG Simulator.* I obviously change this with ever
 
 ## v0.0.2 Alpha ##
 - Started the JS part
-- Made roll() function
+- Made ```roll()``` function
 - Changed some things with the cursor
 - Made changelog, with everything I did in v0.0.1 still in my head
 - Added spacebar clicking
@@ -19,3 +19,9 @@ This is the **changelog** for *RNG Simulator.* I obviously change this with ever
 
 ### v0.0.21 Alpha ###
 - Made a change with italics
+
+### v0.0.22 Alpha ###
+- Even more CSS changes (will I ever be satisfied?)
+- Added customizable decimal precision since I like customizability
+- This is because I've gotten rolls like ```0.008913805749128811``` and I couldn't see the whole thing with the current ```.toFixed(2)```
+- I thought I just got a straight ```0.00``` and had to use ```console.log(yourRoll)``` to find out that I actually didn't get ```0.00```
