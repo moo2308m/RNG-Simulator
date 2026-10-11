@@ -87,7 +87,6 @@ body {
       <option value="16">16</option>
     </select>
   </div>
-
   
 <script>
 "use strict"
@@ -112,7 +111,7 @@ function roll() {
 
 rollBtn.addEventListener("click", roll);
 document.addEventListener("keydown", (e) => {
-  if(e.code === "Space") {
+  if(e.code === "Space" && rollCount > 0) {
     e.preventDefault();
     if(e.repeat) return;
     rollBtn.classList.add("active");
